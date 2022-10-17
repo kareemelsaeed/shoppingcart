@@ -37,9 +37,12 @@ const App = ()=>{
     setProducts(product)
   }
 
-  let count = ()=>{
-    let product = products.filter((e)=> e.count > 0)
-    console.log(product.length);
+  let reset = ()=>{
+    let product = products.map((e)=>{
+      e.count = 0 ;
+      return e ;
+    })
+    setProducts(product)
   }
 
 
@@ -56,7 +59,7 @@ const App = ()=>{
 
       <Routes>
         <Route path="/" element={<Home products={products} add={add} mines={mines} del={del}/>} />
-        <Route path="/Home" element={<Home products={products} add={add} mines={mines} del={del}/>} />
+        <Route path="/Home" element={<Home products={products} add={add} mines={mines} del={del} reset={reset}/>} />
         <Route path="/Detals" element={<Detals products={products}/>} />
       </Routes>
 

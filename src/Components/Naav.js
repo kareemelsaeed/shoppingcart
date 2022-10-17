@@ -3,7 +3,7 @@ import { Badge } from "react-bootstrap";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Naav.css" ;
 
 
@@ -14,7 +14,7 @@ const Naav = (props) => {
         <div>
             <Navbar bg="light" expand="lg">
                 <Container>
-                  <Navbar.Brand >Shopping</Navbar.Brand>
+                  <Navbar.Brand className="fw-bold">Shopping</Navbar.Brand>
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">

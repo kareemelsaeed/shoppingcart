@@ -6,6 +6,12 @@ const Home = (props)=>{
     const navigate = useNavigate()
     return(
         <div>
+
+            <div>
+                <h1 className="text-center text-info mt-3">Shopping Cart</h1>
+                <Button variant="danger ms-5 mt-2" onClick={props.reset}>Reset</Button>
+            </div>
+
             {props.products.map((e)=>(
                 <div key={e.id} className="d-flex justify-content-around mt-4 text-center">
                     <h1 style={{width:"6rem"}}>{e.name}</h1>
